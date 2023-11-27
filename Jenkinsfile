@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    git branch: 'main', url: 'https://github.com/phuongnd8888/demo.git'
-                }
+                checkout scm
             }
         }
 
