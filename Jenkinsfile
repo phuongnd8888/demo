@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building and packaging the application...'
-                    sh 'docker build -t node-docker .'
+                    sh 'docker build -t node-docker1 .'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying the application...'
-                    sh 'docker run -p 80:80 -d --name my-app2 node-docker'
+                    sh 'docker run -p 80:80 -d --name my-app3 node-docker1'
                 }
             }
         }
